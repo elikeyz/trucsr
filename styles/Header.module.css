@@ -1,0 +1,102 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 5% 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.header nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul li {
+  margin: 0 10px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header nav ul li a:hover {
+  color: #4CB952;
+}
+
+.navBtn {
+  background-color: #4CB952;
+  color: white;
+  height: 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  border: 1px solid #4CB952;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.navBtn img {
+  margin-left: 15px;
+  transform: translate(0, 0);
+  transition: transform .5s;
+}
+
+.navBtn:hover img {
+  transform: translate(-10px, 0);
+}
+
+.toggleBtn {
+  display: none;
+  border: none;
+  background-color: inherit;
+  font-size: 2rem;
+  color: white;
+}
+
+.mobileNav {
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  top: 70px;
+  background-color: #3546AC;
+}
+
+.mobileNav ul {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.mobileNav ul li {
+  margin: 10px 10%;
+}
+
+.mobileNav ul li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mobileNav ul li a:hover {
+  color: #4CB952;
+}
+
+@media only screen and (max-width: 1080px) {
+  .header nav {
+    display: none;
+  }
+
+  .toggleBtn {
+    display: block;
+  }
+}
