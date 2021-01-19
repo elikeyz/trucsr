@@ -64,6 +64,7 @@
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1.2px;
   cursor: pointer;
+  border-bottom: 2px solid #4CB952;
 }
 
 .underline {
@@ -92,6 +93,8 @@
   background-color: inherit;
   margin: 5px;
   box-sizing: border-box;
+  transition: background-color 1.5s;
+  outline: none;
 }
 
 .slideBtns button.active {

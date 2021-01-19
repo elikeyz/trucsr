@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import headerStyles from '../styles/Header.module.css'
+import Link from 'next/link';
 
 const Header = () => {
 
@@ -10,27 +11,39 @@ const Header = () => {
       <header className={headerStyles.header}>
         <img src="/logo.png" alt="TruCSR logo" />
         <button onClick={() => setShowMobile(!showMobile)} className={headerStyles.toggleBtn}>
-          <i class="fas fa-bars"></i>
+          <i className="fas fa-bars"></i>
         </button>
         <nav>
           <ul>
             <li>
-              <a>Services</a>
+              <Link href="/">
+                <a>Services</a>
+              </Link>
             </li>
             <li>
-              <a>About Us</a>
+              <Link href="/">
+                <a>About Us</a>
+              </Link>
             </li>
             <li>
-              <a>CSR Academy</a>
+              <Link href="/">
+                <a>CSR Academy</a>
+              </Link>
             </li>
             <li>
-              <a>Publications</a>
+              <Link href="/">
+                <a>Publications</a>
+              </Link>
             </li>
             <li>
-              <a>Events</a>
+              <Link href="/">
+                <a>Events</a>
+              </Link>
             </li>
             <li>
-              <a>Media</a>
+              <Link href="/">
+                <a>Media</a>
+              </Link>
             </li>
             <li>
               <button className={headerStyles.navBtn}>
@@ -44,23 +57,35 @@ const Header = () => {
       {showMobile && (
         <nav className={headerStyles.mobileNav}>
           <ul>
-            <li>
-              <a>Services</a>
+          <li>
+              <Link href="/">
+                <a>Services</a>
+              </Link>
             </li>
             <li>
-              <a>About Us</a>
+              <Link href="/">
+                <a>About Us</a>
+              </Link>
             </li>
             <li>
-              <a>CSR Academy</a>
+              <Link href="/">
+                <a>CSR Academy</a>
+              </Link>
             </li>
             <li>
-              <a>Publications</a>
+              <Link href="/">
+                <a>Publications</a>
+              </Link>
             </li>
             <li>
-              <a>Events</a>
+              <Link href="/">
+                <a>Events</a>
+              </Link>
             </li>
             <li>
-              <a>Media</a>
+              <Link href="/">
+                <a>Media</a>
+              </Link>
             </li>
             <li>
               <button className={headerStyles.navBtn}>

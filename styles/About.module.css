@@ -1,0 +1,126 @@
+.aboutSection {
+  background-color: #F8F8F8;
+  padding: 20px 10% 20px 15%;
+}
+
+.aboutSection > article {
+  display: flex;
+  margin: 20px 0 50px;
+}
+
+.aboutSection > article h2 {
+  text-transform: uppercase;
+  color: #3546AC;
+  font-size: 1.1rem;
+  margin: 0;
+  width: 130px;
+  letter-spacing: 2px;
+  margin-top: 7px;
+}
+
+.title {
+  display: flex;
+}
+
+.titlePrepend {
+  height: 4px;
+  width: 40px;
+  background-color: #3546AC;
+  margin-top: 16px;
+  margin-right: 20px;
+}
+
+.aboutSection > article p {
+  margin: 0;
+  line-height: 35px;
+}
+
+.storySection {
+  display: flex;
+  margin: 20px 0;
+}
+
+.storySection article h2 {
+  color: #3546AC;
+  font-size: 1.1rem;
+  margin: 0;
+  width: 130px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.storySection article p {
+  line-height: 35px;
+}
+
+.storyImages {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.firstStoryImageWrapper {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-left-radius: 50px;
+  padding-bottom: 150px;
+  box-shadow: 0px 37px 88px 0 rgba(0,0,0,0.25);
+}
+
+.secondStoryImageWrapper {
+  width: 200px;
+  margin-left: 100px;
+  height: 200px;
+  overflow: hidden;
+  border-bottom-left-radius: 40px;
+  margin-top: 40px;
+}
+
+.firstStoryImageWrapper img {
+  width: 100%;
+}
+
+.secondStoryImageWrapper img {
+  height: 100%;
+}
+
+.link {
+  display: flex;
+  margin-top: 40px;
+}
+
+.link a {
+  color: #4CB952;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  border-bottom: 2px solid #4CB952;
+}
+
+.link img {
+  margin-left: 10px;
+  transform: translate(0, 2px);
+  transition: transform .5s;
+}
+
+.link:hover img {
+  transform: translate(-10px, 2px);
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutSection > article, .storySection {
+    flex-direction: column;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .storySection article {
+    margin-top: 20px;
+  }
+}

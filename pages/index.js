@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
-import styles from '../styles/Home.module.css'
+import About from '../components/About'
+import Services from '../components/Services'
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Header />
       <main>
         <Banner />
+        <About />
+        <Services />
       </main>
     </>
   )

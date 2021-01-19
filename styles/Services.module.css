@@ -1,0 +1,118 @@
+.serviceSection {
+  padding: 20px 10% 20px 15%;
+}
+
+.serviceSection > article {
+  display: flex;
+  margin: 20px 0 50px;
+}
+
+.serviceSection > article h2 {
+  text-transform: uppercase;
+  color: #3546AC;
+  font-size: 1.1rem;
+  margin: 0;
+  width: 200px;
+  letter-spacing: 2px;
+  margin-top: 7px;
+}
+
+.serviceSection > article p {
+  margin: 0;
+  line-height: 35px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 49%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #3546AC;
+  color: white;
+  margin: 10px 0;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.card article {
+  padding: 20px;
+}
+
+.cardImgContainer {
+  height: 24vw;
+  overflow: hidden;
+}
+
+.cardImgContainer img {
+  width: 100%;
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+.cardImgContainer:hover img {
+  transform: scale(1.5);
+}
+
+.link {
+  display: flex;
+  margin-top: 40px;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.link a {
+  color: #5CE563;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  border-bottom: 2px solid #5CE563;
+}
+
+.link img {
+  margin-left: 10px;
+  transform: translate(0, 2px);
+  transition: transform .5s;
+}
+
+.link:hover img {
+  transform: translate(-10px, 2px);
+}
+
+@media only screen and (max-width: 768px) {
+  .serviceSection > article {
+    flex-direction: column;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .cardImgContainer {
+    height: 200px;
+  }
+}
+
+.title {
+  display: flex;
+}
+
+.titlePrepend {
+  height: 4px;
+  width: 40px;
+  background-color: #3546AC;
+  margin-top: 16px;
+  margin-right: 20px;
+}
