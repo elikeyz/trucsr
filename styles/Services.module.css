@@ -87,6 +87,18 @@
   transform: translate(-10px, 2px);
 }
 
+.title {
+  display: flex;
+}
+
+.titlePrepend {
+  height: 4px;
+  width: 40px;
+  background-color: #3546AC;
+  margin-top: 16px;
+  margin-right: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .serviceSection > article {
     flex-direction: column;
@@ -103,16 +115,4 @@
   .cardImgContainer {
     height: 200px;
   }
-}
-
-.title {
-  display: flex;
-}
-
-.titlePrepend {
-  height: 4px;
-  width: 40px;
-  background-color: #3546AC;
-  margin-top: 16px;
-  margin-right: 20px;
 }
