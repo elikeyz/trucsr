@@ -71,7 +71,12 @@
 }
 
 .overlay h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.overlay p {
+  line-height: 25px;
 }
 
 .navBtn {
@@ -85,6 +90,7 @@
   border: 1px solid #4CB952;
   padding: 20px;
   cursor: pointer;
+  letter-spacing: 1.2px;
 }
 
 .navBtn img {
@@ -100,5 +106,11 @@
 @media only screen and (max-width: 768px) {
   .cards {
     width: 250%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .overlay h3 {
+    font-size: 1.5rem;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import projectStyles from '../styles/Projects.module.css'
 
 const Projects = () => {

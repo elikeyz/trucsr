@@ -42,6 +42,7 @@
   border: 1px solid #4CB952;
   padding: 20px;
   cursor: pointer;
+  letter-spacing: 1.2px;
 }
 
 .navBtn img {

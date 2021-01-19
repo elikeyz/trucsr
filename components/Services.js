@@ -1,4 +1,3 @@
-import React from 'react'
 import servicesStyles from '../styles/Services.module.css'
 import Link from 'next/link'
 

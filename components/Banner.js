@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import bannerStyles from '../styles/Banner.module.css'
 import Link from 'next/link'
 

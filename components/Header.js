@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import headerStyles from '../styles/Header.module.css'
 import Link from 'next/link';
 
