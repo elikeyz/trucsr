@@ -4,7 +4,8 @@ import Header from '../components/Header'
 import About from '../components/About'
 import Services from '../components/Services'
 import Projects from '../components/Projects'
-import Partners from '../components/Partners';
+import Partners from '../components/Partners'
+import Blog from '../components/Blog'
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Services />
         <Projects />
         <Partners />
+        <Blog />
       </main>
     </>
   )

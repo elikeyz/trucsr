@@ -70,7 +70,7 @@
 .link a {
   color: #5CE563;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1.2px;
   cursor: pointer;
@@ -114,5 +114,11 @@
 
   .cardImgContainer {
     height: 200px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .serviceSection {
+    padding: 20px 5%;
   }
 }

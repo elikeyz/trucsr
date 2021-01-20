@@ -94,7 +94,7 @@
 .link a {
   color: #4CB952;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1.2px;
   cursor: pointer;
@@ -122,5 +122,29 @@
 
   .storySection article {
     margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .storyImages {
+    width: calc(100vw - 120px);
+    margin-bottom: 30px;
+  }
+
+  .firstStoryImageWrapper, .secondStoryImageWrapper {
+    height: calc(100vw - 120px);
+    width: 100%;
+  }
+
+  .firstStoryImageWrapper {
+    padding-bottom: 0;
+  }
+
+  .secondStoryImageWrapper {
+    margin-left: 0;
+  }
+
+  .aboutSection {
+    padding: 20px 5%;
   }
 }

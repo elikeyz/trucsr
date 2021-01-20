@@ -1,0 +1,100 @@
+.blogSection {
+  padding: 50px 10% 50px 15%;
+}
+
+.blogSection h2 {
+  text-transform: uppercase;
+  color: #3546AC;
+  font-size: 1.1rem;
+  margin: 0;
+  width: 200px;
+  letter-spacing: 2px;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.titlePrepend {
+  height: 4px;
+  width: 40px;
+  background-color: #3546AC;
+  margin-top: 16px;
+  margin-right: 20px;
+}
+
+.blogCard {
+  margin: 20px 0;
+  display: flex;
+}
+
+.blogCard article {
+  width: 50%;
+  padding: 10px 30px;
+}
+
+.blogCard article small {
+  color: #C9C9C9;
+  text-transform: uppercase;
+}
+
+.blogCard article h3 {
+  color: #3546AC;
+  font-size: 1.8rem;
+}
+
+.blogCard article p {
+  color: #7D7D7D;
+}
+
+.imgWrapper {
+  width: 50%;
+}
+
+.imgWrapper img {
+  width: 100%;
+}
+
+.link {
+    display: flex;
+    margin-top: 40px;
+  }
+  
+  .link a {
+    color: #4CB952;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    border-bottom: 2px solid #4CB952;
+  }
+  
+  .link img {
+    margin-left: 10px;
+    transform: translate(0, 2px);
+    transition: transform .5s;
+  }
+  
+  .link:hover img {
+    transform: translate(-10px, 2px);
+  }
+
+@media only screen and (max-width: 992px) {
+  .blogCard {
+    flex-direction: column;
+  }
+
+  .blogCard article, .imgWrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .blogSection {
+    padding: 50px 5%;
+  }
+}
