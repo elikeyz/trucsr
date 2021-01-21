@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import headerStyles from '../styles/Header.module.css'
-import Link from 'next/link';
 
 const Header = () => {
 
@@ -11,7 +13,7 @@ const Header = () => {
       <header className={headerStyles.header}>
         <img src="/logo.png" alt="TruCSR logo" />
         <button onClick={() => setShowMobile(!showMobile)} className={headerStyles.toggleBtn}>
-          <i className="fas fa-bars"></i>
+          <FontAwesomeIcon icon={faBars} />
         </button>
         <nav>
           <ul>

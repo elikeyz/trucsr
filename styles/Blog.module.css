@@ -1,5 +1,5 @@
 .blogSection {
-  padding: 50px 10% 50px 15%;
+  padding: 50px 10% 50px;
 }
 
 .blogSection h2 {
@@ -34,6 +34,7 @@
 .blogCard article {
   width: 50%;
   padding: 10px 30px;
+  background-color: #F8F8F8;
 }
 
 .blogCard article small {
@@ -48,6 +49,7 @@
 
 .blogCard article p {
   color: #7D7D7D;
+  line-height: 30px;
 }
 
 .imgWrapper {
@@ -83,7 +85,7 @@
     transform: translate(-10px, 2px);
   }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1080px) {
   .blogCard {
     flex-direction: column;
   }

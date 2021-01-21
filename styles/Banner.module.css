@@ -54,6 +54,7 @@
 
 .background .overlay p {
   font-size: 1.1rem;
+  line-height: 30px;
 }
 
 .background .overlay .link a {
@@ -95,6 +96,7 @@
   box-sizing: border-box;
   transition: background-color 1.5s;
   outline: none;
+  cursor: pointer;
 }
 
 .slideBtns button.active {

@@ -1,0 +1,79 @@
+.footer {
+  padding: 50px 10% 200px;
+  background: #3546AC;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer > div h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer > div ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer > div ul li {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.footer > div address {
+  text-align: right;
+  margin-top: 10px;
+  font-style: normal;
+  line-height: 25px;
+  font-size: 0.85rem;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.socialLogo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #3546AC;
+  border-radius: 50%;
+  margin: 10px 0 10px 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .footer > div {
+    width: 50%;
+  }
+
+  .footer > div:nth-child(2) {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer > div {
+    width: 100%;
+    margin: 20px 0
+  }
+
+  .footer > div, .footer > div:nth-child(2), .footer > div address {
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .socialLogo {
+    margin: 10px;
+  }
+}
