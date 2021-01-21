@@ -29,13 +29,13 @@
 
 .cards {
   display: flex;
-  transform: translate(-16%, 0);
+  transform: translate(-19%, 0);
   transition: transform 1s;
-  width: 150%;
+  width: 160%;
 }
 
 .card {
-  width: 37%;
+  width: 25%;
   height: 90vh;
   overflow: hidden;
   position: relative;
@@ -108,7 +108,8 @@
 
 @media only screen and (max-width: 768px) {
   .cards {
-    width: 250%;
+    width: 321%;
+    transform: translate(-22%, 0px);
   }
 }
 

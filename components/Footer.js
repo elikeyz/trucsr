@@ -77,7 +77,7 @@ const Footer = () => (
         <br />
         30, Shakiru Anjorin Street, Road 39, Off
         <br />
-        Admiralty Way,Lekki Phase 1, Lekki, Lagos,
+        Admiralty Way, Lekki Phase 1, Lekki, Lagos,
         <br />
         Phone: <a href="tel:+2341234456">+234 123 4456</a>
       </address>

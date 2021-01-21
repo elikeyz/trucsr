@@ -29,7 +29,7 @@
 }
 
 .card {
-  width: 49%;
+  width: calc(50% - 5px);
   border-radius: 5px;
   overflow: hidden;
   background-color: #3546AC;
