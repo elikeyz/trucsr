@@ -8,54 +8,55 @@ const Projects = () => {
   const [translate, setTranslate] = useState('');
 
   useEffect(() => {
-    const mobileScrollHandler = (e) => {
-      if (e.pageX < 20) {
-        // Scroll the cards left if mouse is at the left edge of the screen for mobile devices
-        console.log(translate);
-        setTranslate((state) => {
-          switch (state) {
-            case 'translate(-72%, 0px)':
-              return 'translate(-47%, 0px)';
-            case 'translate(-47%, 0px)':
-              return 'translate(-22%, 0px)';
-            default:
-              return 'translate(3%, 0px)';
-          }
-        });
-      } else if (e.pageX > (window.innerWidth - 50)) {
-        // Scroll the cards right if mouse is at the left edge of the screen for mobile devices
-        console.log(translate);
-        setTranslate((state) => {
-          switch (state) {
-            case 'translate(-47%, 0px)':
-              return 'translate(-72%, 0px)';
-            case 'translate(3%, 0px)':
-              return '';
-            default:
-              return 'translate(-47%, 0px)';
-          }
-        });
-      } else {
-        console.log(e.pageX);
-        console.log(window.innerWidth);
-        setTranslate('');
-      }
-    }
     const scrollHandler = (e) => {
-      if (e.pageX < 20) {
-        // Scroll the cards left if mouse is at the left edge of the screen for desktop and tablet devices
-        setTranslate('translate(0px, 0px)');
-      } else if (e.pageX > (window.innerWidth - 50)) {
-        // Scroll the cards right if mouse is at the left edge of the screen for desktop and tablet devices
-        setTranslate('translate(-38%, 0px)');
+      if (window.innerWidth > 768) {
+        if (e.pageX < 20) {
+          // Scroll the cards left if mouse is at the left edge of the screen for desktop and tablet devices
+          setTranslate('translate(0px, 0px)');
+        } else if (e.pageX > (window.innerWidth - 50)) {
+          // Scroll the cards right if mouse is at the left edge of the screen for desktop and tablet devices
+          setTranslate('translate(-38%, 0px)');
+        } else {
+          setTranslate('');
+        }
       } else {
-        setTranslate('');
+        if (e.pageX < 20) {
+          // Scroll the cards left if mouse is at the left edge of the screen for mobile devices
+          setTranslate((state) => {
+            switch (state) {
+              case 'translate(-72%, 0px)':
+                return 'translate(-47%, 0px)';
+              case 'translate(-47%, 0px)':
+                return 'translate(-22%, 0px)';
+              case 'translate(-22%, 0px)':
+              case '':
+                return 'translate(3%, 0px)';
+              default:
+                return state;
+            }
+          });
+        } else if (e.pageX > (window.innerWidth - 50)) {
+          // Scroll the cards right if mouse is at the left edge of the screen for mobile devices
+          setTranslate((state) => {
+            switch (state) {
+              case 'translate(-47%, 0px)':
+                return 'translate(-72%, 0px)';
+              case 'translate(3%, 0px)':
+                return 'translate(-22%, 0px)';
+              case 'translate(-22%, 0px)':
+              case '':
+                return 'translate(-47%, 0px)';
+              default:
+                return state;
+            }
+          });
+        }
       }
     };
     if (window.innerWidth > 768) {
       window.onmousemove = scrollHandler;
     } else {
-      window.onclick = mobileScrollHandler;
+      window.onclick = scrollHandler;
     }
   }, []);
 
