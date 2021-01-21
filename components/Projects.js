@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react'
 import projectStyles from '../styles/Projects.module.css'
 
+// The Projects section
 const Projects = () => {
 
+  // Initialize a state value to determine the whether the cards scroll left, right, or center
   const [translate, setTranslate] = useState('');
 
   useEffect(() => {
     window.onmousemove = (e) => {
       if (e.pageX < 20) {
+        // Scroll the cards left if mouse is at the left edge of the screen
         setTranslate('translate(0, 0)');
       } else if (e.pageX > (window.innerWidth - 50) && window.innerWidth > 768) {
+        // Scroll the cards right if mouse is at the left edge of the screen for desktop and tablet devices
         setTranslate('translate(calc(-5px - 33%), 0)');
       } else if (e.pageX > (window.innerWidth - 50) && window.innerWidth <= 768) {
+        // Scroll the cards right if mouse is at the left edge of the screen for mobile devices
         setTranslate('translate(calc(-60%), 0)');
       } else {
         setTranslate('');
@@ -25,6 +30,7 @@ const Projects = () => {
         <div className={projectStyles.titlePrepend}></div>
         <h2>Our Projects</h2>
       </div>
+      {/* Set the transform translate value from the state */}
       <div style={{ transform: translate }} className={projectStyles.cards}>
         <div className={projectStyles.card}>
           <div className={projectStyles.background} style={{ backgroundImage: 'url(/artsy-solomon.png)' }}></div>

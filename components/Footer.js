@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import footerStyles from '../styles/Footer.module.css'
 
+// The Footer section
 const Footer = () => (
   <footer className={footerStyles.footer}>
     <div>

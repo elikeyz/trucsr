@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import blogStyles from '../styles/Blog.module.css'
 
+// The Blog section
 const Blog = () => (
   <section className={blogStyles.blogSection}>
     <div className={blogStyles.title}>

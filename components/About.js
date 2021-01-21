@@ -1,6 +1,7 @@
 import aboutStyles from '../styles/About.module.css'
 import Link from 'next/link'
 
+// The About Us and Story section
 const About = () => (
   <section className={aboutStyles.aboutSection}>
     <article>

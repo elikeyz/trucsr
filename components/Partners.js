@@ -2,17 +2,23 @@ import { useState } from 'react'
 import Link from 'next/link'
 import partnerStyles from '../styles/Partners.module.css'
 
+// The Partners section
 const Partners = () => {
 
+    // Initialize state values for animation state and last mouse cursor vertical position
     const [animationName, setAnimationName] = useState('scrollLeft');
     const [prevY, setPrevY] = useState(0);
 
+    // Set animation state to scrollRight if mouse cursor moves down and scrollLeft if mouse cursor moves up
     const onHover = (e) => {
         if (e.pageY > (prevY + 20)) {
+            // Scroll right if mouse moves down
             setAnimationName('scrollRight');
         } else if (e.pageY < (prevY - 20)) {
+            // Scroll left if mouse moves up
             setAnimationName('scrollLeft');
         }
+        // Update the prevY state to the current mouse cursor vertical position
         setPrevY(e.pageY);
     };
 
@@ -27,7 +33,9 @@ const Partners = () => {
                     Our team seek to help your organization navigate this threshold that stands between your brands and distinctive innovations, and finding your brands inner sanctum.
                 </p>
             </article>
+            {/* Call the onHover function when the mouse moves over the card grid */}
             <div onMouseMove={onHover} className={partnerStyles.cardGrid}>
+                {/* Set the animation name from the state to scroll the grid left or right */}
                 <div className={partnerStyles[animationName]}>
                     <div className={partnerStyles.card}>
                         <img src="/nestle.png" alt="Nestle Logo" />

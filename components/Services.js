@@ -1,6 +1,7 @@
 import servicesStyles from '../styles/Services.module.css'
 import Link from 'next/link'
 
+// The Services section
 const Services = () => (
   <section className={servicesStyles.serviceSection}>
     <article>

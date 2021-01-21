@@ -4,14 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import headerStyles from '../styles/Header.module.css'
 
+// The Header section
 const Header = () => {
 
+  // Initialize a state value to determine whether mobile nav should display
   const [showMobile, setShowMobile] = useState(false);
 
   return (
     <>
       <header className={headerStyles.header}>
         <img src="/logo.png" alt="TruCSR logo" />
+        {/* Set a click listener to toggle mobile nav visibility */}
         <button onClick={() => setShowMobile(!showMobile)} className={headerStyles.toggleBtn}>
           <FontAwesomeIcon icon={faBars} />
         </button>
@@ -56,6 +59,7 @@ const Header = () => {
           </ul>
         </nav>
       </header>
+      {/* Display mobile nav if the showMobile state is true */}
       {showMobile && (
         <nav className={headerStyles.mobileNav}>
           <ul>
