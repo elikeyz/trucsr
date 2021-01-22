@@ -79,10 +79,13 @@ const Projects = () => {
     if (initialX || initialX === 0) {
       const dx = unify(e).clientX - initialX;
       const sign = Math.sign(dx);
-      if (sign < 0) {
-        scrollRight();
-      } else if (sign > 0) {
-        scrollLeft();
+      // Use this condition to reduce swipe sensitivity
+      if (Math.abs(dx) > 50) {
+        if (sign < 0) {
+          scrollRight();
+        } else if (sign > 0) {
+          scrollLeft();
+        }
       }
       setInitialX(null);
     }
