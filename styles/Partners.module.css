@@ -181,6 +181,7 @@
       .testimonial {
         flex-direction: column;
         padding-left: 0;
+        align-items: center;
       }
 
       .imageWrapper {

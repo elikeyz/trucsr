@@ -120,6 +120,14 @@
     margin-bottom: 20px;
   }
 
+  .storySection {
+    align-items: center;
+  }
+
+  .storyImages {
+    margin-right: 0;
+  }
+
   .storySection article {
     margin-top: 20px;
   }
