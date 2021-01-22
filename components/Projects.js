@@ -7,52 +7,134 @@ const Projects = () => {
   // Initialize a state value to determine the whether the cards scroll left, right, or center
   const [translate, setTranslate] = useState('');
 
-  useEffect(() => {
-    const scrollHandler = (e) => {
-      if (window.innerWidth > 768) {
-        if (e.pageX < 20) {
-          // Scroll the cards left if mouse is at the left edge of the screen for desktop and tablet devices
-          setTranslate('translate(0px, 0px)');
-        } else if (e.pageX > (window.innerWidth - 50)) {
-          // Scroll the cards right if mouse is at the left edge of the screen for desktop and tablet devices
-          setTranslate('translate(-38%, 0px)');
+  // Define a state value to determine whether the touch event is the user's initial touch
+  const [initialX, setInitialX] = useState(null);
+
+  const scrollLeft = () => {
+    if (window.innerWidth > 768) {
+      // Scroll the cards left if mouse is at the left edge of the screen for desktop and tablet devices
+      setTranslate((state) => {
+        if (state === '') {
+          return 'translate(0px, 0px)';
         } else {
-          setTranslate('');
+          return '';
         }
-      } else {
-        if (e.pageX < 20) {
-          // Scroll the cards left if mouse is at the left edge of the screen for mobile devices
-          setTranslate((state) => {
-            switch (state) {
-              case 'translate(-72%, 0px)':
-                return 'translate(-47%, 0px)';
-              case 'translate(-47%, 0px)':
-                return 'translate(-22%, 0px)';
-              case 'translate(-22%, 0px)':
-              case '':
-                return 'translate(3%, 0px)';
-              default:
-                return state;
-            }
-          });
-        } else if (e.pageX > (window.innerWidth - 50)) {
-          // Scroll the cards right if mouse is at the left edge of the screen for mobile devices
-          setTranslate((state) => {
-            switch (state) {
-              case 'translate(-47%, 0px)':
-                return 'translate(-72%, 0px)';
-              case 'translate(3%, 0px)':
-                return 'translate(-22%, 0px)';
-              case 'translate(-22%, 0px)':
-              case '':
-                return 'translate(-47%, 0px)';
-              default:
-                return state;
-            }
-          });
+      });
+    } else {
+      // Scroll the cards left if mouse is at the left edge of the screen for mobile devices
+      setTranslate((state) => {
+        switch (state) {
+          case 'translate(-72%, 0px)':
+            return 'translate(-47%, 0px)';
+          case 'translate(-47%, 0px)':
+            return 'translate(-22%, 0px)';
+          case 'translate(-22%, 0px)':
+          case '':
+            return 'translate(3%, 0px)';
+          default:
+            return state;
         }
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (window.innerWidth > 768) {
+      // Scroll the cards right if mouse is at the left edge of the screen for desktop and tablet devices
+      setTranslate((state) => {
+        if (state === '') {
+          return 'translate(-38%, 0px)';
+        } else {
+          return '';
+        }
+      });
+    } else {
+      // Scroll the cards right if mouse is at the left edge of the screen for mobile devices
+      setTranslate((state) => {
+        switch (state) {
+          case 'translate(-47%, 0px)':
+            return 'translate(-72%, 0px)';
+          case 'translate(3%, 0px)':
+            return 'translate(-22%, 0px)';
+          case 'translate(-22%, 0px)':
+          case '':
+            return 'translate(-47%, 0px)';
+          default:
+            return state;
+        }
+      });
+    }
+  };
+
+  // Unify the touch and mouse events for swiping
+  const unify = e => e.changedTouches ? e.changedTouches[0] : e;
+
+  // Store the X-position of the user's initial screen touch
+  const lock = (e) => {
+    setInitialX(unify(e).clientX);
+  };
+
+  // Scroll the cards left or right depending on the direction of the swipe
+  const move = (e) => {
+    if (initialX || initialX === 0) {
+      const dx = unify(e).clientX - initialX;
+      const sign = Math.sign(dx);
+      if (sign < 0) {
+        scrollRight();
+      } else if (sign > 0) {
+        scrollLeft();
       }
-    };
+      setInitialX(null);
+    }
+  }
+
+  const scrollHandler = (e) => {
+    if (window.innerWidth > 768) {
+      if (e.pageX < 20) {
+        // Scroll the cards left if mouse is at the left edge of the screen for desktop and tablet devices
+        setTranslate('translate(0px, 0px)');
+      } else if (e.pageX > (window.innerWidth - 50)) {
+        // Scroll the cards right if mouse is at the left edge of the screen for desktop and tablet devices
+        setTranslate('translate(-38%, 0px)');
+      } else {
+        setTranslate('');
+      }
+    } else {
+      if (e.pageX < 20) {
+        // Scroll the cards left if mouse is at the left edge of the screen for mobile devices
+        setTranslate((state) => {
+          switch (state) {
+            case 'translate(-72%, 0px)':
+              return 'translate(-47%, 0px)';
+            case 'translate(-47%, 0px)':
+              return 'translate(-22%, 0px)';
+            case 'translate(-22%, 0px)':
+            case '':
+              return 'translate(3%, 0px)';
+            default:
+              return state;
+          }
+        });
+      } else if (e.pageX > (window.innerWidth - 50)) {
+        // Scroll the cards right if mouse is at the left edge of the screen for mobile devices
+        setTranslate((state) => {
+          switch (state) {
+            case 'translate(-47%, 0px)':
+              return 'translate(-72%, 0px)';
+            case 'translate(3%, 0px)':
+              return 'translate(-22%, 0px)';
+            case 'translate(-22%, 0px)':
+            case '':
+              return 'translate(-47%, 0px)';
+            default:
+              return state;
+          }
+        });
+      }
+    }
+  };
+
+  useEffect(() => {
     if (window.innerWidth > 768) {
       window.onmousemove = scrollHandler;
     } else {
@@ -67,7 +149,8 @@ const Projects = () => {
         <h2>Our Projects</h2>
       </div>
       {/* Set the transform translate value from the state */}
-      <div style={{ transform: translate }} className={projectStyles.cards}>
+      {/* Set the mouse and touch events for the screen swipe scroll to work */}
+      <div onMouseDown={lock} onTouchStart={lock} onMouseUp={move} onTouchEnd={move} style={{ transform: translate }} className={projectStyles.cards}>
         <div className={projectStyles.card}>
           <div className={projectStyles.background} style={{ backgroundImage: 'url(/artsy-solomon.png)' }}></div>
           <article className={projectStyles.overlay}>
