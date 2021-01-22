@@ -107,6 +107,12 @@
   position: relative;
 }
 
+@media only screen and (min-height: 700px) {
+  .background {
+    height: 700px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .background .overlay {
     background-image: linear-gradient(to left, rgba(19, 13, 37, 0.41) 5.02%, rgba(19, 13, 37, 0.88) 26.62%, #130D25 60.39%, #130D25 100%);
