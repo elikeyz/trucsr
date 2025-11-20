@@ -102,7 +102,7 @@ const Partners = () => {
             <div className={partnerStyles.link}>
                 <div>
                     <Link href="/">
-                        <a>See More Testimonials</a>
+                        See More Testimonials
                     </Link>
                 </div>
                 <img src="/arrow-right.svg" alt="Arrow Right" />

@@ -19,7 +19,7 @@ const Blog = () => (
         <div className={blogStyles.link}>
           <div>
             <Link href="/">
-              <a>Read More</a>
+              Read More
             </Link>
           </div>
           <img src="/arrow-right.svg" alt="Arrow Right" />
@@ -37,7 +37,7 @@ const Blog = () => (
         <div className={blogStyles.link}>
           <div>
             <Link href="/">
-              <a>Read More</a>
+              Read More
             </Link>
           </div>
           <img src="/arrow-right.svg" alt="Arrow Right" />
@@ -55,7 +55,7 @@ const Blog = () => (
         <div className={blogStyles.link}>
           <div>
             <Link href="/">
-              <a>Read More</a>
+              Read More
             </Link>
           </div>
           <img src="/arrow-right.svg" alt="Arrow Right" />

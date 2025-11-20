@@ -24,7 +24,7 @@ const Services = () => (
           <div className={servicesStyles.link}>
             <div>
               <Link href="/">
-                <a>Work With Us</a>
+                Work With Us
               </Link>
             </div>
             <img src="/arrow-right.svg" alt="Arrow Right" />
@@ -41,7 +41,7 @@ const Services = () => (
           <div className={servicesStyles.link}>
             <div>
               <Link href="/">
-                <a>Work With Us</a>
+                Work With Us
               </Link>
             </div>
             <img src="/arrow-right.svg" alt="Arrow Right" />
@@ -58,7 +58,7 @@ const Services = () => (
           <div className={servicesStyles.link}>
             <div>
               <Link href="/">
-                <a>Work With Us</a>
+                Work With Us
               </Link>
             </div>
             <img src="/arrow-right.svg" alt="Arrow Right" />
@@ -75,7 +75,7 @@ const Services = () => (
           <div className={servicesStyles.link}>
             <div>
               <Link href="/">
-                <a>Work With Us</a>
+                Work With Us
               </Link>
             </div>
             <img src="/arrow-right.svg" alt="Arrow Right" />

@@ -26,9 +26,7 @@ const About = () => (
         <p>TCSRN was founded in 2006, and carried out what many have come to acknowledge as trail blazing spadework that led to a rapid growth of what has become a vibrant and viable corporate social responsibility and sustainability industry in Nigeria, and Africa.</p>
         <div className={aboutStyles.link}>
           <div>
-            <Link href="/">
-              <a>Read Full Story</a>
-            </Link>
+            <Link href="/">Read Full Story</Link>
           </div>
           <img src="/arrow-right.svg" alt="Arrow Right" />
         </div>

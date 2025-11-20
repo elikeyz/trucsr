@@ -18,7 +18,7 @@ const Banner = () => {
           <div className={bannerStyles.link}>
             <div>
             <Link href="/">
-                <a>Make Reservation</a>
+                Make Reservation
             </Link>
             </div>
             <img src="/arrow-right.svg" alt="Arrow Right" />
@@ -33,7 +33,7 @@ const Banner = () => {
           <div className={bannerStyles.link}>
             <div>
             <Link href="/">
-                <a>Explore Site</a>
+                Explore Site
             </Link>
             </div>
             <img src="/arrow-down.svg" alt="Arrow Down" />

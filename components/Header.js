@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import headerStyles from '../styles/Header.module.css'
+import { FaBars } from 'react-icons/fa';
 
 // The Header section
 const Header = () => {
@@ -16,38 +15,38 @@ const Header = () => {
         <img src="/logo.png" alt="TruCSR logo" />
         {/* Set a click listener to toggle mobile nav visibility */}
         <button onClick={() => setShowMobile(!showMobile)} className={headerStyles.toggleBtn}>
-          <FontAwesomeIcon icon={faBars} />
+          <FaBars />
         </button>
         <nav>
           <ul>
             <li>
               <Link href="/">
-                <a>Services</a>
+                Services
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>About Us</a>
+                About Us
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>CSR Academy</a>
+                CSR Academy
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Publications</a>
+                Publications
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Events</a>
+                Events
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Media</a>
+                Media
               </Link>
             </li>
             <li>
@@ -65,32 +64,32 @@ const Header = () => {
           <ul>
           <li>
               <Link href="/">
-                <a>Services</a>
+                Services
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>About Us</a>
+                About Us
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>CSR Academy</a>
+                CSR Academy
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Publications</a>
+                Publications
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Events</a>
+                Events
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Media</a>
+                Media
               </Link>
             </li>
             <li>

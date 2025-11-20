@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import footerStyles from '../styles/Footer.module.css'
+import { FaFacebook, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 // The Footer section
 const Footer = () => (
@@ -10,14 +9,10 @@ const Footer = () => (
       <h2>Customer Service</h2>
       <ul>
         <li>
-          <Link href="/">
-            <a>FAQs</a>
-          </Link>
+          <Link href="/">FAQs</Link>
         </li>
         <li>
-          <Link href="/">
-            <a>Customer Service</a>
-          </Link>
+          <Link href="/">Customer Service</Link>
         </li>
       </ul>
     </div>
@@ -26,17 +21,17 @@ const Footer = () => (
       <ul>
         <li>
           <Link href="/">
-            <a>Careers</a>
+            Careers
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>Partner With Us</a>
+            Partner With Us
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>Investor Relations</a>
+            Investor Relations
           </Link>
         </li>
       </ul>
@@ -46,27 +41,27 @@ const Footer = () => (
       <ul>
         <li>
           <Link href="/">
-            <a>About Us</a>
+            About Us
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>Services</a>
+            Services
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>Partners</a>
+            Partners
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>Customer Stories</a>
+            Customer Stories
           </Link>
         </li>
         <li>
           <Link href="/">
-            <a>Contact Us</a>
+            Contact Us
           </Link>
         </li>
       </ul>
@@ -83,25 +78,19 @@ const Footer = () => (
       </address>
       <div className={footerStyles.social}>
         <Link href="/">
-          <a>
-            <div className={footerStyles.socialLogo}>
-              <FontAwesomeIcon icon={faTwitter} />
-            </div>
-          </a>
+          <div className={footerStyles.socialLogo}>
+            <FaTwitter />
+          </div>
         </Link>
         <Link href="/">
-          <a>
-            <div className={footerStyles.socialLogo}>
-              <FontAwesomeIcon icon={faFacebookF} />
-            </div>
-          </a>
+          <div className={footerStyles.socialLogo}>
+            <FaFacebook />
+          </div>
         </Link>
         <Link href="/">
-          <a>
-            <div className={footerStyles.socialLogo}>
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </div>
-          </a>
+          <div className={footerStyles.socialLogo}>
+            <FaLinkedinIn />
+          </div>
         </Link>
       </div>
     </div>
